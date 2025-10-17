@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Surgi__diet"
+        tools:targetApi="31">
+        <activity
+            android:name=".SubscriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsd4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsd3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsd2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsd1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialss4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialss3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialss2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialss1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsbb4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsbb3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsbb2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsbb1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealb1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsl5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsl4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsl3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsl2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsl1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MealdetialslActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsb3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsb2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetialsb1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetials5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetials4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetials3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetials2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Mealdetials1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Meal5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Meal4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Meal3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Meal2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorprofileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnalysisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RoleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Meals1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MealActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MealdetialsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SigninActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

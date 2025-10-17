@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Doctor1Activity">
+
+    <!-- Welcome Section -->
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Dr.Shivam 👋"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today, July 24"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Search Patient Bar -->
+    <EditText
+        android:id="@+id/search_patient"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Search Patient…"
+        android:paddingLeft="45dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/date_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <!-- Dynamic Patient Details Section -->
+    <LinearLayout
+        android:id="@+id/patient_details_section"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#F5F5F5"
+        android:elevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/search_patient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient Name:"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvSurgery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surgery:"
+            android:textSize="18sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Surgery:"
+            android:textSize="18sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvDiabetes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diabetes:"
+            android:textSize="18sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvFoodPrefs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Preferences:"
+            android:textSize="18sp"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- Patient Card: Arjun -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/patient_card_1"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/patient_details_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/profile_image_1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/mens"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:id="@+id/patient_name_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arjun"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_toEndOf="@id/profile_image_1"
+                android:layout_marginStart="16dp"
+                android:layout_alignTop="@id/profile_image_1"/>
+
+            <LinearLayout
+                android:id="@+id/patient_info_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/patient_name_1"
+                android:layout_alignStart="@id/patient_name_1">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/knee"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Knee"
+                    android:textSize="14sp"
+                    android:layout_marginStart="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="·"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"/>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/calendar"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2023-07-15"
+                    android:textSize="14sp"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/compliance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="85%"
+                android:textSize="17sp"
+                android:textColor="#26C281"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:layout_alignTop="@id/patient_name_1"/>
+
+            <!-- Fixed this ID reference -->
+            <TextView
+                android:id="@+id/compliance_label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compliance"
+                android:textSize="13sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_alignStart="@id/compliance"
+                android:layout_below="@id/compliance"/>
+
+            <Button
+                android:id="@+id/view_details_button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="View Details"
+                android:backgroundTint="#E5F3E9"
+                android:textColor="#1E824C"
+                android:textSize="15sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

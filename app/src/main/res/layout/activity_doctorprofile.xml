@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".DoctorprofileActivity">
+
+    <!-- Back Arrow -->
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/backarrow"
+        android:contentDescription="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Screen Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="My Profile 👨‍⚕️"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#111827"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/backArrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center_vertical"/>
+
+    <!-- Profile Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profileCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/doctor"
+                android:background="@drawable/bg_circle"
+                android:contentDescription="Doctor image" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/doctorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dr. Shivam"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:textColor="#161B1D"/>
+
+                <TextView
+                    android:id="@+id/doctorSpecialty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cardiologist"
+                    android:textColor="#61697A"
+                    android:textSize="15sp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/doctorHospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unity Health Hospital"
+                    android:textColor="#61697A"
+                    android:textSize="15sp"
+                    android:layout_marginTop="2dp"/>
+
+                <TextView
+                    android:id="@+id/doctorLicense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="License: 12345-67890"
+                    android:textColor="#8491A4"
+                    android:textSize="14sp"
+                    android:layout_marginTop="2dp"/>
+
+                <TextView
+                    android:id="@+id/doctorExperience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15+ Years of Experience"
+                    android:textColor="#8491A4"
+                    android:textSize="14sp"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Edit Profile Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/editProfileSection"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/profileCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp">
+
+            <TextView
+                android:id="@+id/editProfileIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="📝"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/editProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textSize="16sp"
+                android:textColor="#191D23"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/editProfileArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rightarrow"
+                android:contentDescription="Right arrow"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Notification Preferences Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/notificationSection"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/editProfileSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp">
+
+            <TextView
+                android:id="@+id/notificationIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="🔔"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/notificationPref"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Notifications: ON (09:00 AM)"
+                android:textSize="16sp"
+                android:textColor="#191D23"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/notificationArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rightarrow"
+                android:contentDescription="Right arrow"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Support Chat Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/supportChatSection"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/notificationSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp">
+
+            <TextView
+                android:id="@+id/supportChatIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="💬"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/supportChatText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Support Chat"
+                android:textSize="16sp"
+                android:textColor="#191D23"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/supportChatArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rightarrow"
+                android:contentDescription="Right arrow"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Logout Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logoutSection"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/supportChatSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp">
+
+            <TextView
+                android:id="@+id/logoutIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="🪵"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/logoutText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textSize="16sp"
+                android:textColor="#DF2222"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/logoutArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rightarrow"
+                android:contentDescription="Right arrow"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Supportive message at the bottom -->
+    <TextView
+        android:id="@+id/bottomMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="You are guiding patients to a healthier recovery 💙"
+        android:textColor="#8A97A0"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
